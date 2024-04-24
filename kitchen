@@ -45,8 +45,8 @@ requirements(){
             echo -e "\n${GREEN}[i] Python${RESET}\n" ; pkg install python -y > /dev/null 2>&1
         elif [ $TERMUX == 0 ]; then
             sudo apt update -y > /dev/null 2>&1
-            echo -e "\n${GREEN}[i] OpenSSL${RESET}\n" ; sudo apt install openssl -y > /dev/null 2>&1
-            echo -e "\n${GREEN}[i] Python${RESET}\n" ; sudo apt install python3 python-is-python3 -y > /dev/null 2>&1
+            echo -e "\n${GREEN}[i] OpenSSL${RESET}\n" ; yay -Sy openssl -y > /dev/null 2>&1
+            echo -e "\n${GREEN}[i] Python${RESET}\n" ; yay -Sy python > /dev/null 2>&1
         else
             echo -e "${BOLD_RED}[x] Error: Package manager not found.${RESET}"
             exit 1
